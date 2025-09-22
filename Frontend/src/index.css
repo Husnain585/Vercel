@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes bounce-custom {
+    0% {
+      transform: translateY(20px) scaleX(1.7);
+      border-radius: 50px 50px 25px 25px;
+    }
+    40% {
+      transform: translateY(0) scaleX(1);
+      border-radius: 50%;
+    }
+    100% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes shadow-custom {
+    0% {
+      transform: scaleX(1.5);
+      opacity: 1;
+    }
+    40% {
+      transform: scaleX(1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scaleX(0.2);
+      opacity: 0.4;
+    }
+  }
+
+  .animate-bounce-custom {
+    animation: bounce-custom 0.5s alternate infinite ease;
+  }
+
+  .animate-shadow-custom {
+    animation: shadow-custom 0.5s alternate infinite ease;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 0.3s;
+  }
+}

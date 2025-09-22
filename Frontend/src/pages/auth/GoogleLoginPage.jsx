@@ -1,0 +1,17 @@
+// src/pages/GoogleLoginPage.jsx
+import React, { useEffect } from "react";
+
+const GoogleLoginPage = () => {
+  useEffect(() => {
+    // Redirect to backend Google OAuth
+    window.location.href = "http://localhost:3000/api/auth/google";
+  }, []);
+
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-50 dark:bg-gray-900">
+      <p className="text-gray-700 dark:text-gray-200">Redirecting to Google...</p>
+    </div>
+  );
+};
+
+export default GoogleLoginPage;
